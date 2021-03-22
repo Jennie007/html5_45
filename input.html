@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<h1>绑定数据</h1>
+		<div id="app">
+			写点东西
+			<br>
+			{{userText}}
+			<br>
+			<input v-model="userText" />
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					userText:''
+				}
+			})
+		</script>
+	</body>
+</html>
