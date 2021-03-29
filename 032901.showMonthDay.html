@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="number" v-model="message" placeholder="请输入月份"/>
+			<li v-if="message==1">{{message}}月共有31天</li>
+			<li v-if="message==2">{{message}}月共有29天</li>
+			<li v-if="message==3">{{message}}月共有31天</li>
+			<li v-if="message==4">{{message}}月共有30天</li>
+			<li v-if="message==5">{{message}}月共有31天</li>
+			<li v-if="message==6">{{message}}月共有30天</li>
+			<li v-if="message==7">{{message}}月共有31天</li>
+			<li v-if="message==8">{{message}}月共有31天</li>
+			<li v-if="message==9">{{message}}月共有30天</li>
+			<li v-if="message==10">{{message}}月共有31天</li>
+			<li v-if="message==11">{{message}}月共有30天</li>
+			<li v-if="message==12">{{message}}月共有31天</li>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					message:''
+				}
+			})
+		</script>
+	</body>
+</html>
