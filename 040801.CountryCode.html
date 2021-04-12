@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="" style="margin-top:100px; text-align:center">
+			<div class="" id="app">
+				<span>
+					各个国家的电话区号：<br>
+					中国：86；<br>
+					日本：81；<br>
+					韩国：82；<br>
+					尼泊尔：977；<br>
+					新加坡：65.<br>
+				</span>
+				<input v-model="userNumber" type="text" name="" id="" value=""  /><br>
+				该国的电话区号是：
+				<span id="" v-if="userNumber==86">{{phones[0].name}}</span>
+				<span id="" v-if="userNumber==81">{{phones[1].name}}</span>
+				<span id="" v-if="userNumber==82">{{phones[2].name}}</span>
+				<span id="" v-if="userNumber==977">{{phones[3].name}}</span>
+				<span id="" v-if="userNumber==65">{{phones[4].name}}</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var v = new Vue({
+				el:'#app',
+				data:{
+					userNumber:'',
+					phones:[
+						{name:"中国"},
+						{name:"日本"},
+						{name:"韩国"},
+						{name:"尼泊尔"},
+						{name:"新加坡"},
+					]
+				}
+			});
+		</script>
+	</body>
+</html>

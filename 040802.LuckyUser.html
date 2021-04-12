@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="" style="margin-top:100px; text-align:center">
+			<div class="app" id="app">
+				<input type="button" @click="rdmUser=Math.floor(Math.random()*10)%5" value="随机抽取" />
+				{{users[rdmUser]}}
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var v = new Vue({
+				el:'#app',
+				data:{
+					rdmUser:'',
+					users:[
+						{name:"tom"},
+						{name:"jack"},
+						{name:"lisa"},
+						{name:"jennie"},
+						{name:"coco"},
+					]
+				}
+			});
+		</script>
+	</body>
+</html>
