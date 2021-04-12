@@ -18,11 +18,13 @@
 				</span>
 				<input v-model="userNumber" type="text" name="" id="" value=""  /><br>
 				该国的电话区号是：
-				<span id="" v-if="userNumber==86">{{phones[0].name}}</span>
-				<span id="" v-if="userNumber==81">{{phones[1].name}}</span>
+				<div class="" v-for="phone in phones">
+					<span id="" v-if="userNumber==phone.number">{{phone.name}}</span>
+				</div>
+				<!-- <span id="" v-if="userNumber==81">{{phones[1].name}}</span>
 				<span id="" v-if="userNumber==82">{{phones[2].name}}</span>
 				<span id="" v-if="userNumber==977">{{phones[3].name}}</span>
-				<span id="" v-if="userNumber==65">{{phones[4].name}}</span>
+				<span id="" v-if="userNumber==65">{{phones[4].name}}</span> -->
 			</div>
 		</div>
 		
@@ -32,11 +34,11 @@
 				data:{
 					userNumber:'',
 					phones:[
-						{name:"中国"},
-						{name:"日本"},
-						{name:"韩国"},
-						{name:"尼泊尔"},
-						{name:"新加坡"},
+						{name:"中国",number:"86"},
+						{name:"日本",number:"81"},
+						{name:"韩国",number:"82"},
+						{name:"尼泊尔",number:"977"},
+						{name:"新加坡",number:"65"},
 					]
 				}
 			});
