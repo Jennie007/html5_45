@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 回车事件触发猜数字游戏 -->
+		<div id="app">
+			The answer is :{{answerNumber}}
+			<br>
+			回车键触发事件
+			<br>
+			<input type="number" v-model="userNumber" @keyup.enter="show()" placeholder="快来玩猜数字游戏吧" />
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el:"#app",
+				data:{
+					answerNumber:Math.floor(Math.random()*10),
+					userNumber:''
+				},
+				methods:{
+					show(){
+						if(v.userNumber > v.answerNumber && v.userNumber != ''){
+							alert("猜大了");
+						}else if(v.userNumber < v.answerNumber && v.userNumber != ''){
+							alert("猜小了");
+						}else if(v.userNumber == v.answerNumber && v.userNumber != ''){
+							alert("恭喜你，猜对了");
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

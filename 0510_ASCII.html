@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 回车键触发键盘事件，输出表单文本中的字符的ASCII码 -->
+		<div id="app">
+			<input type="text" v-model="enterKey" @keyup.enter="show()" />
+			<br>
+			{{enterKey}}
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el:"#app",
+				data:{
+					enterKey:''
+				},
+				methods:{
+					show(){
+						alert(v.enterKey.charCodeAt());
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
